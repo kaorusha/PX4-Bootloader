@@ -61,6 +61,7 @@ export ARCH_SRCS	 = cdcacm.c  usart.c
 TARGETS	= \
 	aerofcv1_bl \
 	auavx2v1_bl \
+	avc_fmuv5_bl \
 	avx_v1_bl \
 	crazyflie21_bl \
 	crazyflie_bl \
@@ -178,6 +179,9 @@ modalai_fc_v1_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 
 uvify_core_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=UVIFY_CORE LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+avc_fmuv5_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
+	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=AVC_FMU_V5 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
 
 # Default bootloader delay is *very* short, just long enough to catch
 # the board for recovery but not so long as to make restarting after a

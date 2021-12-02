@@ -17,6 +17,7 @@ pipeline {
             target: [
                      "aerofcv1_bl",
                      "auavx2v1_bl",
+                     "avc_fmuv5_bl",
                      "avx_v1_bl",
                      "crazyflie21_bl",
                      "crazyflie_bl",
