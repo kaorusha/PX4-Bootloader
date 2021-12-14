@@ -377,6 +377,11 @@ board_init(void)
 	gpio_mode_setup(GPIOA, GPIO_MODE_INPUT, GPIO_PUPD_PULLDOWN, GPIO9);
 #  endif
 #endif
+#  if defined(BOARD_USB_ENABLE_HIGH)
+	rcc_peripheral_enable_clock(&RCC_AHB1ENR, RCC_AHB1ENR_GPIOGEN);
+	gpio_mode_setup(GPIOG, GPIO_MODE_OUTPUT, GPIO_PUPD_PULLUP, GPIO13);
+	gpio_set_output_options(GPIOG, GPIO_OTYPE_OD, GPIO_OSPEED_2MHZ, GPIO13);
+#  endif
 #endif
 
 #if INTERFACE_USART

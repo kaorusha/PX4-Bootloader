@@ -1480,6 +1480,7 @@
 # define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
 # define BOARD_USART_PIN_CLOCK_BIT      RCC_AHB1ENR_GPIOEEN
 # define SERIAL_BREAK_DETECT_DISABLED   1
+# define BOARD_USB_ENABLE_HIGH          1
 
 /*
  * Uncommenting this allows to force the bootloader through
